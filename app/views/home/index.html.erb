@@ -56,8 +56,14 @@
 
     <div class="container">
 
-      <h1>Puffer fish starter template</h1>
-      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+      <h1>Puffer fish - Never surf alone </h1>
+      <p>Project Pufferfish is a non profit project for surfers to always have access to great surf! <br>
+      	Dontat today and help us launch this bad boy!
+      </p>
+
+      <a class="wepay-widget-button wepay-green" id="wepay_widget_anchor_5043ebbbe398f" href="https://www.wepay.com/donations/84882">Donate $5.00</a>
+	
+
 
       <div id="masonContainer">
         <div class="masonItem">
@@ -107,6 +113,30 @@
 
 	</script>
 
+<script type="text/javascript">
+	var WePay = WePay || {};
+	WePay.load_widgets = WePay.load_widgets || function() { };
+	WePay.widgets = WePay.widgets || [];
+	WePay.widgets.push( {
+		object_id: 84882,
+		widget_type: "donation_campaign",
+		anchor_id: "wepay_widget_anchor_5043ebbbe398f",
+		widget_options: {
+			donation_amount: "500",
+			allow_cover_fee: true,
+			enable_recurring: true,
+			allow_anonymous: true,
+			button_text: "Donate $5.00"
+		}
+	});
+	if (!WePay.script) {
+		WePay.script = document.createElement('script');WePay.script.type = 'text/javascript';WePay.script.async = true;
+		WePay.script.src = 'https://static.wepay.com/min/js/widgets.v2.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(WePay.script, s);
+	} else if (WePay.load_widgets) {
+		WePay.load_widgets();
+	}
+</script>
 
 
   </body>
