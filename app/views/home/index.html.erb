@@ -15,7 +15,9 @@
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
-    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="../js/jquery-1.8.1.min.js"></script>
+    <script src="../js/jquery.masonry.min.js"></script>
+    <link href="../css/index.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -57,6 +59,27 @@
       <h1>Puffer fish starter template</h1>
       <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
 
+      <div id="masonContainer">
+        <div class="masonItem">
+          <img src="http://www.museumoftheweird.com/wp-content/uploads/2011/10/shark-surfing.jpg" alt="sharkpic">
+        </div>
+
+        <div class="masonItem">
+          <img src="http://gfg2sports.files.wordpress.com/2008/06/maliajones.jpg" alt="sharkpic">
+        </div>
+        <div class="masonItem">
+          <img src="http://www.shareyourride.net/images/Its_Never_Too_Late_To_Become_A_Surfer_Dude/Really_Big_Wave.jpg" alt="sharkpic">
+        </div>
+        <div class="masonItem">
+          <img src="http://www.escapefromamerica.com/wp-content/uploads/2010/06/normal_surf.jpg" alt="sharkpic">
+        </div>
+        <div class="masonItem">
+          <img src="http://www.bontheball.com/wp-content/uploads/2011/09/hot_surfer_chick.gif" alt="sharkpic">
+        </div>
+        <div class="masonItem">
+          <img src="http://www.aquasurfschool.com/images/pictures/california-surf-class.jpg" alt="sharkpic">
+        </div>
+      </div>
     </div> <!-- /container -->
 
     <!-- Le javascript
@@ -69,22 +92,22 @@
 		    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
 		    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/xcCmM8gESUOOYuuZdpHxyw.js';
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+
+
 		  })();
+        $('img').load(function(){
+          setTimeout(function(){
+            $('#masonContainer').masonry({
+              itemSelector: '.masonItem'
+            });
+          })
+
+        })
+
+
 	</script>
 
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
+
 
   </body>
 </html>
